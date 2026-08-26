@@ -1,38 +1,12 @@
 // ============================================
 // Maya Mohamed — Data Analyst Portfolio
-// theme toggle · scroll-spy nav · project galleries
+// scroll-spy nav · project galleries
 // ============================================
 
 (function () {
   "use strict";
 
-  /* ---------- Theme toggle ---------- */
   const body = document.body;
-  const themeToggle = document.getElementById("themeToggle");
-  const toggleLabel = document.getElementById("toggleLabel");
-
-  function applyTheme(theme) {
-    body.setAttribute("data-theme", theme);
-    toggleLabel.textContent = theme === "dark" ? "Dark" : "Light";
-    try {
-      localStorage.setItem("maya-portfolio-theme", theme);
-    } catch (e) {
-      /* localStorage unavailable — theme just won't persist */
-    }
-  }
-
-  // Restore saved theme (defaults to the "dark" already set in the HTML)
-  try {
-    const saved = localStorage.getItem("maya-portfolio-theme");
-    if (saved === "dark" || saved === "light") applyTheme(saved);
-  } catch (e) {
-    /* ignore */
-  }
-
-  themeToggle.addEventListener("click", function () {
-    const current = body.getAttribute("data-theme");
-    applyTheme(current === "dark" ? "light" : "dark");
-  });
 
   /* ---------- Scroll-spy navigation (sidebar + mobile tabs) ---------- */
   const sections = Array.from(document.querySelectorAll("main .section[id]"));
