@@ -80,48 +80,6 @@ img{ max-width: 100%; display: block; }
   border-radius: 4px;
 }
 
-/* -------- Theme toggle -------- */
-.theme-toggle{
-  position: fixed;
-  top: 20px;
-  right: 24px;
-  z-index: 60;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--bg-elevated);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 6px 14px 6px 6px;
-  cursor: pointer;
-  font-family: var(--font-mono);
-  font-size: 12px;
-  color: var(--text-dim);
-  box-shadow: var(--shadow);
-}
-
-.toggle-track{
-  width: 34px;
-  height: 18px;
-  border-radius: 999px;
-  background: var(--border);
-  position: relative;
-  transition: background var(--transition);
-}
-
-.toggle-thumb{
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: var(--accent);
-  transition: transform var(--transition);
-}
-
-body[data-theme="light"] .toggle-thumb{ transform: translateX(16px); }
-
 /* -------- App shell -------- */
 .app{
   display: flex;
@@ -483,7 +441,7 @@ main{
   overflow: hidden;
   background: var(--bg-elevated);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 .project-media{
@@ -495,10 +453,8 @@ main{
 
 .project-media img{
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  min-height: 220px;
-  flex: 1;
+  height: auto;
+  display: block;
 }
 
 /* Spreadsheet-tab style gallery switcher */
@@ -735,7 +691,6 @@ main{
   .section{ padding: 56px 20px 64px; }
   .section:last-of-type{ padding-bottom: 100px; }
 
-  .theme-toggle{ top: 14px; right: 14px; }
 
   .kpi-strip{ grid-template-columns: repeat(2, 1fr); max-width: 100%; }
   .about-grid{ grid-template-columns: 1fr; }
