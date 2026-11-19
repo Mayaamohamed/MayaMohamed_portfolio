@@ -450,6 +450,8 @@ main{
   display: grid;
   grid-template-columns: 1fr;
   gap: 28px;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .project-card{
@@ -459,6 +461,8 @@ main{
   background: var(--bg-elevated);
   display: grid;
   grid-template-columns: 1fr;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .project-media{
@@ -466,6 +470,8 @@ main{
   background: var(--bg-sidebar);
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .project-media img{
@@ -481,7 +487,9 @@ main{
   padding: 8px 8px 0;
   background: var(--bg-sidebar);
   border-top: 1px solid var(--border-soft);
+  max-width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .media-tab{
@@ -495,6 +503,7 @@ main{
   padding: 7px 12px;
   cursor: pointer;
   white-space: nowrap;
+  flex-shrink: 0;
   transform: translateY(1px);
   transition: color var(--transition), background var(--transition);
 }
@@ -512,6 +521,8 @@ main{
   padding: 26px 28px;
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .project-title-row{
@@ -717,6 +728,8 @@ main{
     width: 140px;
     height: 140px;
   }
+
+  .project-body{ padding: 20px 18px; }
 
   .kpi-strip{ grid-template-columns: repeat(2, 1fr); max-width: 100%; }
   .skills-grid{ grid-template-columns: 1fr; gap: 28px; }
